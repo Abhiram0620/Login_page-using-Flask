@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..\static/style.css">
+</head>
+<body>
+    {%if name %}
+    <h1>Welcome Mr. {{name}}</h1>
+    {% endif %}
+    <form action="/showdatabase" >
+        <input style="width: 200px; background-color: green; font-size: 15px;" type="submit" name="submit" id="submit">
+    </form>
+    
+</body>
+</html>

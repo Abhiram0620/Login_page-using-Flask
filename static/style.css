@@ -1,0 +1,28 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#registration{
+    display: flex;
+    margin: auto;
+    width: 350px;
+    height: auto;   
+    margin-top: 50px;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 13px;
+}
+
+#registration input{
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+}

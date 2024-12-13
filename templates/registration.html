@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="..\static/style.css">
+    <script>
+        function redirectToLogin(){
+            window.location.href = '/login';  // Fixed the extra space
+        }
+    </script>
+</head>
+<body>
+    <div id="registration" style="display: flex; flex-direction: column;">
+        <form action="/register" method="POST">
+            <h2 style="margin-bottom: 30px; text-align: center;">Registration Form</h2>
+            <label for="full_name">Name</label>
+            <input type="text" name="full_name" id="full_name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" required>
+            
+            {% if msg %}
+                <p style="color: red;">{{ msg }}</p>
+            {% endif %}
+            <input style="background-color: green; color: white; font-size: 16px;" type="submit" value="Register">
+            
+        </form>
+        <form action="/gotologin">
+            <input style="background-color: green; color: white; font-size: 16px;" type="submit" name="gotologin" value="go to login" id="gotologin">
+        </form> 
+        
+    </div>
+   
+</body>
+</html>

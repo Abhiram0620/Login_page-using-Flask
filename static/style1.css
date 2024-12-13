@@ -1,0 +1,12 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+}
+table{
+    width: 700px;
+}
+td{
+    padding: 20px;
+}
