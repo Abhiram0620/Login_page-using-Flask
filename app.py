@@ -33,10 +33,15 @@ def register():
         database.close()
 
         return render_template('dashboard.html', name=name)
+    except pymysql.err.IntegrityError as e:
+        print("this is duplicate entry")
+        return render_template("registration.html", msg = "user already registered" )
+
     
     except pymysql.MySQLError as e:
         print(f"Error: {e}")
-        return render_template("registration.html", msg=e)
+        return render_template("registration.html", msg="error occur while regstering ")
+    
 
 
 @app.route('/showdatabase')
