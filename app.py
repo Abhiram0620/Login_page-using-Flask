@@ -83,6 +83,9 @@ def login():
 @app.route('/gotologin')
 def gotologin():
     return render_template('login.html')
+@app.route('/gotosign')
+def gotosign():
+    return render_template('registration.html')
 
     
 if __name__ == '__main__':

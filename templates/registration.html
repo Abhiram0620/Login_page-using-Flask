@@ -7,37 +7,41 @@
     <link rel="stylesheet" href="..\static/style.css">
     <script>
         function redirectToLogin(){
-            window.location.href = '/login';  // Fixed the extra space
+            window.location.href = '/login';  // Redirect to login page
         }
     </script>
 </head>
 <body>
-    <div id="registration" style="display: flex; flex-direction: column;">
+    <div id="registration-box">
+        <div id="registration-header">
+            <h1>Register</h1>
+        </div>
         <form action="/register" method="POST">
-            <h2 style="margin-bottom: 30px; text-align: center;">Registration Form</h2>
-            <label for="full_name">Name</label>
-            <input type="text" name="full_name" id="full_name" required>
-            
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-            
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
-            
-            <label for="cpassword">Confirm Password</label>
-            <input type="password" name="cpassword" id="cpassword" required>
-            
+            <div id="input-box">
+                <input type="text" name="full_name" id="full_name" required placeholder="Full Name">
+            </div>
+            <div id="input-box">
+                <input type="email" name="email" id="email" required placeholder="Email">
+            </div>
+            <div id="input-box">
+                <input type="password" name="password" id="password" required placeholder="Password">
+            </div>
+            <div id="input-box">
+                <input type="password" name="cpassword" id="cpassword" required placeholder="Confirm Password">
+            </div>
             {% if msg %}
-                <p style="color: red;">{{ msg }}</p>
+                <p style="color: red; text-align: center;">{{ msg }}</p>
             {% endif %}
-            <input style="background-color: green; color: white; font-size: 16px;" type="submit" value="Register">
-            
+            <div>
+                <input type="submit" name="submit" id="submit" value="Register">
+            </div>
         </form>
         <form action="/gotologin">
-            <input style="background-color: green; color: white; font-size: 16px;" type="submit" name="gotologin" value="go to login" id="gotologin">
-        </form> 
-        
+            <div id="login-link" style="display: flex;justify-content: center; align-items: center; ">
+                <p>Already have an account?</p>
+                <input type="submit" name="submit1" id="submit1" value="signin" style="border: none; background: none; color: black; font-weight: bold;">
+            </div>
+        </form>
     </div>
-   
 </body>
 </html>

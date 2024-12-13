@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="..\static/style.css">
+    <link rel="stylesheet" href="..\static/style2.css">
 </head>
 <body>
     <div id="registration">
         <form action="/login" method="POST">
-            <h2 style="margin-bottom: 30px; text-align: center;">Login Form</h2>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-            {% if msg %}
-            <p style="color: red;  margin-top: -10px;">{{msg}} </p>
-            {% endif %}
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
-
-            {% if msg1 %}
-                <p style="color: red; margin-top: -10px;">{{ msg1 }}</p>
-            {% endif %}
-            
-            <input style="background-color: green; color: white; font-size: 16px;" type="submit" value="Register">
+            <div id="login-box">
+                <div id="login-header">
+                    <h1>Login</h1>
+                </div>
+                <div id="input-box">
+                    <input type="email" name="email" id="email" required placeholder="Email">
+                </div>
+                <div id="input-box">
+                    <input type="password" name="password" id="password" required placeholder="Password">
+                    {% if msg1 %}
+                    <p style="text-align: center; margin-bottom: 10px; color: rgb(255, 61, 61);">{{msg1}}</p>
+                    {% endif %}
+                </div>
+                <div id="forgot">
+                    <div>
+                        <input type="checkbox" name="rem" id="rem">
+                        <label for="rem">Remember me</label>
+                    </div>
+                    <div>
+                        <a href="" id="forgot-password">forgot password</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <input type="submit" name="submit" id="submit">
+                </div>
+                
+            </div>
+        </form>
+        <form action="/gotosign">
+            <div id="sign-up-link" style="display: flex;justify-content: center; align-items: center; gap: 10px; ">
+                <p>I have account?</p>
+                <input type="submit" name="submit1" id="submit1" value="Login" style="border: none; background: none; color: black; font-weight: bold; font-size: 16px;">
+            </div>
         </form>
     </div>
 </body>
