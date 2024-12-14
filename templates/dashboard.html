@@ -8,9 +8,10 @@
 </head>
 <body>
     {%if name %}
-    <h1>Welcome Mr. {{name}}</h1>
+    <h1 style="display:block;margin-top: 20px;">Welcome Mr. {{name}}</h1>
     {% endif %}
-    <form action="/showdatabase" >
+    <br><br>
+    <form action="/showdatabase" style="display:block;margin-top: 20px;">
         <input style="width: 200px; background-color: green; font-size: 15px;" type="submit" name="submit" id="submit">
     </form>
     
